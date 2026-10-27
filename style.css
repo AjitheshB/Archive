@@ -103,7 +103,7 @@ body {
     box-shadow: 0 16px 45px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.18);
 }
 
-.intro-head .archive-head {
+.intro-head {
     opacity:1;
     pointer-events:auto;
     font-family: 'Allura', cursive;
@@ -143,6 +143,131 @@ body {
     background:rgba(255,255,255,0.1);
     border-radius:16px;
     border: 1px solid;
+}
+
+.tutorial {
+    opacity:0;
+    pointer-events:none;
+    display:none;
+
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    width:80%;
+    max-width:650px;
+    min-height:400px;
+    padding:42px;
+
+    background:rgba(241,232,213,0.94);
+    color:var(--ink);
+    border:1px solid var(--rule);
+    outline:1px solid rgba(241,232,213,0.5);
+    outline-offset:6px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+
+    z-index:10;
+
+    transition:opacity 0.2s ease;
+}
+
+.tutorial.visible {
+    opacity:1;
+    pointer-events:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.tutorial-slide {
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    border-radius:12px;
+    animation: slide-in 0.35s ease;
+}
+
+.tutorial-slide.active {
+    display:flex;
+}
+
+.tutorial-label {
+    font-family:monospace;
+    font-size:14px;
+    letter-spacing:2px;
+    color: var(--muted-ink);
+}
+
+.tutorial-slide h2 {
+    font-family:'Allura', cursive;
+    font-size:50px;
+    font-weight:700;
+    margin:12px 0;
+}
+
+.tutorial-slide h3 {
+    font-family:'Allura', cursive;
+    font-size:30px;
+    font-weight:500;
+    margin:0 0 !important;
+    gap:0px !important;
+}
+
+
+.tutorial-text {
+    max-width:440px;
+    font-family:'Libre Baskerville', Georgia, serif;
+    font-size:14px;
+    line-height:2.0;
+}
+
+.tutorial-highlight {
+    font-family:'monospace';
+    font-weight:500;
+    margin-top:10px;
+    font-size:26px;
+    color: #76513b;
+    text-align:center;
+    line-height:1.4;
+    margin-top:10px;
+}
+
+.tutorial-number {
+    margin-bottom:8px;
+    font-family:'Allura', cursive;
+    font-size:15px;
+    color:var(--muted-ink);
+}
+
+.tutorial-footer {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    margin-top:25px;
+    font-family:monospace;
+    font-weight:350;
+    font-size:12px;
+    letter-spacing:1px;
+
+    color:var(--muted-ink);
+    border:1px solid var(--rule);
+    padding-top:14px;
+    
+}
+
+@keyframes slide-in {
+    from {
+        opacity:0;
+        transform:translateY(8px)
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 /* STATES */
