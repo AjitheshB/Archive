@@ -423,6 +423,10 @@ body {
     text-align: center;
     padding:6px;
     width:100%;
+    background:var(--faint-rule);
+    color:#000;
+    width:95%;
+    height:70%;
 
     transition:background 0.2s ease, color 0.2s ease;
 }
@@ -442,4 +446,3 @@ body {
     opacity:0;
     pointer-events:none;
 }
-

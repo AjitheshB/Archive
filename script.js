@@ -37,6 +37,7 @@ function nextSlide() {
     if(currentSlide >= slides.length) {
         tutorial.classList.remove("visible")
         terminal.classList.add("visible")
+        lucide.createIcons()
         return
     }
     slides[currentSlide].classList.add("active")
@@ -46,10 +47,12 @@ tutorial.addEventListener("click", nextSlide)
 
 document.addEventListener("keydown", (event) => {
     if (event.code !== "Space") return
+    if (event.repeat) return
     if (!tutorial.classList.contains("visible")) return
 
     event.preventDefault()
     nextSlide()
+
 })
 
 const btn = document.querySelector(".btn")
@@ -70,3 +73,18 @@ btn.addEventListener("click", () => {
     terminal.classList.remove("visible")
     vis = 1
 })
+
+lucide.createIcons();
+
+const help = document.querySelector(".help-btn")
+
+help.addEventListener("click", () => {
+    terminal.classList.remove("visible")
+    tutorial.classList.add("visible")
+
+    slides.forEach(slide => slide.classList.remove("active"))
+
+    currentSlide = 0
+    slides[currentSlide].classList.add("active")
+}
+)
