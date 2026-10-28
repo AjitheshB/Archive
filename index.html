@@ -8,7 +8,11 @@
 
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+
+    <audio id="bgm" loop preload="auto">
+        <source src="assets/bgm.mp3" type="audio/mpeg">
+    </audio>
+
         <div class="intro">
             <div class="intro-top">
                 <span> ESTD. 1847 · VOL. IV</span>
@@ -137,7 +141,83 @@
 
         <!--Terminal-->
         <div class="terminal" id="terminal">
+            <header class="terminal-head">
+                <div>
+                    <p class="terminal-org">U.S. DEPT. OF JUSTICE</p>
+                    <h2>DEA - EXECUTION TERMINAL</h2>
+                </div>
+                <div class="status">
+                    <span class="btn">ESC</span>
+                    <span>HIGHLY CONFIDENTIAL</span>
+                </div>
+            </header>
+            
+            <main class="terminal-content">
+                <section class="overview">
+                    <p class="label">== ACTIVE CASE ==</p>
+                    <h1>James Morgan McGill</h1>
+                    <p>== A.K.A. SAUL GOODMAN ==</p>
 
+                    <div class="details">
+                        <div>
+                            <span>CASE STATS</span>
+                            <p>Location: Unknown</p>
+                        </div>
+                        <span>LAST SEEN IN</span>
+                        <p>Abq, New Mexico</p>
+
+                    </div>
+                </section>
+
+                <section class="operations">
+                    <p class="label">OPERATIONS</p>
+
+                    <button class="operation-button" data-screeen="records">
+                        <span class="operation-num">01</span>
+                        <span>
+                            <strong>Search for records</strong>
+                        </span>
+                        <span>
+                            <small>Examine files</small>
+                            <small> →</small>
+                        </span>
+                       
+                    </button>
+
+                    <button class="operation-button" data-screeen="records">
+                        <span class="operation-num">02</span>
+                        <span>
+                            <strong>Review Leads</strong>
+                        </span>
+                        <span>
+                            <small>Inspect sightings and recorded suspicicions</small>
+                            <small> →</small>
+                        </span>
+                       
+                    </button>
+
+
+                    <button class="operation-button" data-screeen="records">
+                        <span class="operation-num">03</span>
+                        <span>
+                            <strong>Case Status</strong>
+                        </span>
+                        <span>
+                            <small>Review your progress and case progression</small>
+                            <small> →</small>
+                        </span>
+                       
+                    </button>
+                </section>
+            </main>
+
+                <hr width="50%">
+
+                <footer class="terminal-footer">
+                    <span>DEA RECORDS SYSTEM</span>
+                    <span>HIGHLY SECRETIVE</span>
+                </footer>
+             
         </div>
 
 
