@@ -6,6 +6,10 @@ const terminal = document.querySelector("#terminal")
 let vis = 0
 
 intro.addEventListener("click", () => {
+    terminal.scrollTo({
+            top:0,
+            behavior: "smooth"
+        })
     if (vis === 0) {
         intro.classList.add("entered")
         tutorial.classList.add("visible")
@@ -13,7 +17,7 @@ intro.addEventListener("click", () => {
 // BGM!!!
         const bgm = document.querySelector("#bgm")
 
-        bgm.volume = 0.25
+        bgm.volume = 0.5
 
         bgm.play().catch(error => {
             console.log("BGM failed")
@@ -21,6 +25,11 @@ intro.addEventListener("click", () => {
     } else {
         terminal.classList.add("visible")
         intro.classList.add("entered")
+
+        terminal.scrollTo({
+            top:0,
+            behavior: "smooth"
+        })
     }
 })
 
@@ -55,7 +64,7 @@ document.addEventListener("keydown", (event) => {
 
 })
 
-const btn = document.querySelector(".btn")
+const btn = document.querySelector(".status .btn:not(.help-btn")
 
 document.addEventListener("keydown", (event) => {
     if (event.code !== "Escape") return
@@ -88,3 +97,43 @@ help.addEventListener("click", () => {
     slides[currentSlide].classList.add("active")
 }
 )
+
+const recordsBtn = document.querySelector(".recordsbtn")
+const recordsPage = document.querySelector(".records-pg")
+const deleteContent = document.querySelector(".del-contents")
+
+recordsBtn.addEventListener("click", () => {
+    deleteContent.classList.add("remove")
+    recordsPage.classList.add("visible")
+
+    terminal.scrollTo( {
+        top: 0,
+        behaviour: "smooth"
+    })
+})
+
+const back = document.querySelectorAll(".back")
+
+back.forEach((back) => {
+    back.addEventListener("click",() => {
+        if (subjId.classList.contains("visible")) {
+            subjId.classList.remove("visible")
+            recordsPage.classList.add("visible")
+        } else {
+            deleteContent.classList.remove("remove")
+            recordsPage.classList.remove("visible")
+
+        terminal.scrollTo({
+            top: 0,
+            behaviour: "smooth"
+        })
+    }
+})
+const subjId = document.querySelector(".subject-identification")
+const subjIdBtn = document.querySelector(".identification")
+
+subjIdBtn.addEventListener("click", () => {
+    subjId.classList.add("visible")
+    recordsPage.classList.remove("visible")
+})
+})

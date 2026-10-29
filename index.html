@@ -161,57 +161,112 @@
                     <p class="label">== ACTIVE CASE ==</p>
                     <h1>James Morgan McGill</h1>
                     <p>== A.K.A. SAUL GOODMAN ==</p>
+                </section>
+                    <div class="del-contents">
+                        <div class="details">
+                            <div>
+                                <span>CASE STATS</span>
+                                <p>Location: Unknown</p>
+                            </div>
+                            <span>LAST SEEN IN</span>
+                            <p>Abq, New Mexico</p>
 
-                    <div class="details">
-                        <div>
-                            <span>CASE STATS</span>
-                            <p>Location: Unknown</p>
                         </div>
-                        <span>LAST SEEN IN</span>
-                        <p>Abq, New Mexico</p>
 
+                    <section class="operations">
+                        <p class="label">OPERATIONS</p>
+
+                        <button class="operation-button recordsbtn" data-screen="records">
+                            <span class="operation-num">01</span>
+                            <span>
+                                <strong>Search for records</strong>
+                            </span>
+                            <span>
+                                <small>Examine files</small>
+                                <small> →</small>
+                            </span>
+                       
+                        </button>
+
+                        <button class="operation-button" data-screen="leads">
+                            <span class="operation-num">02</span>
+                            <span>
+                                <strong>Review Leads</strong>
+                            </span>
+                            <span>
+                                <small>Inspect sightings and recorded suspicicions</small>
+                                <small> →</small>
+                            </span>
+                       
+                        </button>
+
+
+                        <button class="operation-button" data-screen="status">
+                            <span class="operation-num">03</span>
+                            <span>
+                                <strong>Case Status</strong>
+                            </span>
+                            <span>
+                                <small>Review your progress and case progression</small>
+                                <small> →</small>
+                            </span>
+                       
+                        </button>
                     </div>
                 </section>
-
-                <section class="operations">
-                    <p class="label">OPERATIONS</p>
-
-                    <button class="operation-button" data-screeen="records">
-                        <span class="operation-num">01</span>
-                        <span>
-                            <strong>Search for records</strong>
-                        </span>
-                        <span>
-                            <small>Examine files</small>
-                            <small> →</small>
-                        </span>
-                       
+                <!--Records-->
+                <div class="records-pg">
+                    <button class="back">
+                        <i data-lucide="arrow-left"></i>
+            
                     </button>
 
-                    <button class="operation-button" data-screeen="records">
-                        <span class="operation-num">02</span>
-                        <span>
-                            <strong>Review Leads</strong>
-                        </span>
-                        <span>
-                            <small>Inspect sightings and recorded suspicicions</small>
-                            <small> →</small>
-                        </span>
-                       
+                    <button class="identification">
+                        <i data-lucide="folder"></i>
+                        <span>Subject Identification</span>
                     </button>
 
-
-                    <button class="operation-button" data-screeen="records">
-                        <span class="operation-num">03</span>
-                        <span>
-                            <strong>Case Status</strong>
-                        </span>
-                        <span>
-                            <small>Review your progress and case progression</small>
-                            <small> →</small>
-                        </span>
-                       
+                    <button class="investigation">
+                        <i data-lucide="folder"></i>
+                        <span>Investigation Brief</span>
                     </button>
+
+                    <button class="information">
+                        <i data-lucide="folder"></i>
+                        <span>Last Known Information</span>
+                    </button>
+                </div>
+
+                <!--Subject id-->
+                <section class="subject-identification">
+
+                    <button class="back btn">
+                        <i data-lucide="arrow-left"></i>
+            
+                    </button>
+                    <h2 class="overview">Subject Identification</h2>
+
+                    <hr width="50%">
+
+                    <div class="subject-details">
+                        <span><strong>Name:</strong></strongName:> James Morgan McGill</span>
+                        <span><strong>Known Alias:</strong> Saul Goodman</span>
+                        <span><strong>Profression:</strong> Former Criminal Defense Attorney</span>
+                        <span><strong>Last Known Jurisdiction:</strong> Albuquerque, New Mexico</span>
+                    </div>
+
+                    <hr weight="100" width="20%">
+
+                    <div class="subject-details">
+                        <span><strong>Other Public Aliases:</strong></span>
+                        <span>Jimmy McGill</span>
+                        <span>Slippin' Jimmy</span>
+                        <span>Gene Takavic</span>
+                        <span>Kevin Costner</span>
+                        <span>Viktor St. Clair</span>
+                        <span>Charlie Hustle</span>
+                    </div>  
+
                 </section>
             </main>
 
@@ -224,6 +279,7 @@
              
         </div>
 
+        
 
     </body>
 
