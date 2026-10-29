@@ -486,6 +486,15 @@ body {
 
 .subject-identification {
     display:none !important;
+    background:var(--paper-dark);
+    padding:15px;
+    margin:15px;
+    border-radius:16px;
+    border:1px solid var(--rule);
+    border-bottom:none;
+    margin-bottom:30px;
+    outline:1px solid var(--rule);
+    outline-offset:6px;
 }
 
 .subject-details {

@@ -108,7 +108,7 @@ recordsBtn.addEventListener("click", () => {
 
     terminal.scrollTo( {
         top: 0,
-        behaviour: "smooth"
+        behavior: "smooth"
     })
 })
 
@@ -119,14 +119,18 @@ back.forEach((back) => {
         if (subjId.classList.contains("visible")) {
             subjId.classList.remove("visible")
             recordsPage.classList.add("visible")
+            terminal.scrollTo({
+                top: 0,
+                behavior: "smooth"
+        })
         } else {
             deleteContent.classList.remove("remove")
             recordsPage.classList.remove("visible")
-
-        terminal.scrollTo({
-            top: 0,
-            behaviour: "smooth"
+            terminal.scrollTo({
+                top: 0,
+                behavior: "smooth"
         })
+
     }
 })
 const subjId = document.querySelector(".subject-identification")
@@ -135,5 +139,10 @@ const subjIdBtn = document.querySelector(".identification")
 subjIdBtn.addEventListener("click", () => {
     subjId.classList.add("visible")
     recordsPage.classList.remove("visible")
+
+    terminal.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
 })
 })
