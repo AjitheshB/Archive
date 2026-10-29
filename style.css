@@ -429,6 +429,7 @@ body {
     color:#000;
     width:95%;
     height:70%;
+    cursor:crosshair;
 
     transition:background 0.2s ease, color 0.2s ease;
 }
@@ -543,4 +544,63 @@ body {
 
     transform:none;
     display:block;
+}
+
+
+/*Decision Layer!*/
+
+#decisions, #game-over{
+
+    max-width:700px;
+    margin:60px auto;
+    padding:32px;
+    color:#292319;
+    background:#e8dcc0;
+    border:1px solid var(--rule);
+    box-shadow:0 8px 24px rgba(0,0,0,0.2);
+
+    display:none;
+    text-align:center;
+    align-items:center;
+}
+
+#decisions.visible {
+    display:block !important;
+}
+
+.decisions h2, .game-over h2 {
+    font-family:'Allura',cursive;
+    font-size:2rem;
+    margin-bottom:20px;
+
+    font-weight:700;
+}
+
+.decision p{
+    font-size:1.05rem;
+    line-height:1.7;
+    margin-bottom:24px;
+}
+
+.decisions button, .game-over button {
+    font-family:'Libre Baskerville', Georgia, serif;
+    background:var(--paper-dark);
+    border-radius:12px;
+    padding:6px;
+    gap:12px;
+    margin:20px auto;
+
+}
+
+.decisions span {
+    font-family:monospace;
+    font-weight:600;
+    font-size:1rem;
+    display:block;
+    margin-top:40px;
+    margin-bottom:5px;
+}
+
+#decisions {
+    display: none !important;
 }

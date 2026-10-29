@@ -64,7 +64,7 @@ document.addEventListener("keydown", (event) => {
 
 })
 
-const btn = document.querySelector(".status .btn:not(.help-btn")
+const btn = document.querySelector(".status .btn:not(.help-btn)")
 
 document.addEventListener("keydown", (event) => {
     if (event.code !== "Escape") return
@@ -146,3 +146,53 @@ subjIdBtn.addEventListener("click", () => {
     })
 })
 })
+
+
+// DECISION LAAYER
+function chooseOption(correct,nextScene) {
+    const currentScene = document.querySelector(
+        "#scene-1"
+    )
+
+    if (!currentScene) {
+        console.error("no scene found...")
+        return
+    }
+
+    if (!correct) {
+        const gameOver=document.querySelector("#game-over")
+        gameOver.hidden=false
+        gameOver.style.display = "block"
+        terminal.scrollTo({
+            top:0,
+            behavior:"smooth"
+        })  
+        currentScene.hidden = true
+        document.querySelector("#game-over").hidden = false
+        return
+
+        
+    }
+
+
+    if (nextScene) {
+        currentScene.hidden = true
+        document.querySelector(nextScene).hidden = false
+    } else {
+        console.error("Scene not found:", nextScene)
+    }
+}   
+
+const investigationBtn = document.querySelector(".investigationbtn")
+const decisionLayer = document.querySelector(".decisions")
+
+investigationBtn.addEventListener("click", () => {
+    deleteContent.classList.add("remove")
+    decisionLayer.classList.add("visible")
+
+    terminal.scrollTo({
+        top:0,
+        behavior:"smooth"
+    })
+})
+

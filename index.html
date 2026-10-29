@@ -188,10 +188,10 @@
                        
                         </button>
 
-                        <button class="operation-button" data-screen="leads">
+                        <button class="operation-button investigationbtn" data-screen="leads">
                             <span class="operation-num">02</span>
                             <span>
-                                <strong>Review Leads</strong>
+                                <strong>INVESTIGATION</strong>
                             </span>
                             <span>
                                 <small>Inspect sightings and recorded suspicicions</small>
@@ -224,16 +224,6 @@
                     <button class="identification">
                         <i data-lucide="folder"></i>
                         <span>Subject Identification</span>
-                    </button>
-
-                    <button class="investigation">
-                        <i data-lucide="folder"></i>
-                        <span>Investigation Brief</span>
-                    </button>
-
-                    <button class="information">
-                        <i data-lucide="folder"></i>
-                        <span>Last Known Information</span>
                     </button>
                 </div>
 
@@ -269,6 +259,36 @@
 
                 </section>
 
+                <!--DECISION LAYER-->
+                <section class="decisions visible" id="decisions">
+                    <section class="decision-scene" id="scene-1">
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+            
+                        </button>
+                        <h2>Tapping into the Records</h2>
+                        <p>
+                            You're in <strong>Albequerque.</strong> Your investigation leads you to finding out that <strong>Saul Goodman</strong>
+                            (AKA James McGill) worked at <strong>HHM (a law firm)</strong> previously
+                        </p>
+
+                        <span>What's your next move?</span>
+
+                        <button onclick="chooseOption(true, 'scene-2')">
+                            Contact HHM directly
+                        </button>
+
+                        <button onclick="chooseOption(false)">
+                            Search public records for McGill's cases instead
+                        </button>
+                    </section>
+                </section>
+
+                <section class="game-over" id="game-over" hidden>
+                    <h2>CASE CLOSED...</h2>
+                    <p>Your case flew too close to the sun. It burned</p>
+                    <button onclick="location.reload()">Try Again.</button>
+                </section>
                 
             </main>
 
