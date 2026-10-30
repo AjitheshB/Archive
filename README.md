@@ -39,6 +39,15 @@ Proceed with caution. Use your brain. Make the right decisions.
 
 ---
 
+### How to play
+You can try the game at https://the-archive-case.vercel.app/
+
+---
+
+### So, where did I get this idea?
+So I was watching this show and it was so good that I got an idea to make this game. The Terra topic was also Antique so it fit in perfectly
+I began with the tutorial and the terminal base and finally the decision layer itself (which i struggled with a lot)
+
 Made for HackClub Terra
 
 Wallpaper from DharmX Walls
