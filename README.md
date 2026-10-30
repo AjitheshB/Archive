@@ -1,10 +1,12 @@
 # The Archive
----
+
 A Browser-Based Antique Detective Experience
 
 Made using HTML, CSS and JS
+
 ---
-#### You work for the DEA.
+
+### You work for the DEA.
 
 Decide what to do and what actions to take to uncover the mystery of Saul Goodman's current wherabouts.
 
