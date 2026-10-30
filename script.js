@@ -195,4 +195,3 @@ investigationBtn.addEventListener("click", () => {
         behavior:"smooth"
     })
 })
-

@@ -119,12 +119,12 @@
                 <h2>Begin the search.</h2>
 
                 <p class="tutorial-text">
-                    You have a terminal to use, containing all records and decisions for you to make
+                    You have a terminal to use, containing all records and decisions for you to make!
 
                 </p>
 
                 <p class="tutorial-highlight">
-                    Find Saul Goodman : the lawyer behind Heisenberg 
+                    Find Saul Goodman : the lawyer mastermind 
                 </p>
             </section>
             <footer class="tutorial-footer">
@@ -200,18 +200,6 @@
                        
                         </button>
 
-
-                        <button class="operation-button" data-screen="status">
-                            <span class="operation-num">03</span>
-                            <span>
-                                <strong>Case Status</strong>
-                            </span>
-                            <span>
-                                <small>Review your progress and case progression</small>
-                                <small> →</small>
-                            </span>
-                       
-                        </button>
                     </div>
                 </section>
                 <!--Records-->
@@ -248,7 +236,7 @@
                     <hr weight="100" width="20%">
 
                     <div class="subject-details">
-                        <span><strong>Other Public Aliases:</strong></span>
+                        <span><strong>Other Known Public Aliases:</strong></span>
                         <span>Jimmy McGill</span>
                         <span>Slippin' Jimmy</span>
                         <span>Gene Takavic</span>
@@ -278,7 +266,7 @@
                             Contact HHM directly
                         </button>
 
-                        <button onclick="chooseOption(false)">
+                        <button onclick="chooseOption(true,'fail-1')">
                             Search public records for McGill's cases instead
                         </button>
                     </section>
@@ -308,7 +296,7 @@
                             Ask them to pull up the records anyway
                         </button>
 
-                        <button onclick = "chooseOption(false)">
+                        <button onclick = "chooseOption(true, 'fail-2')">
                             Tell them to do it secretively (this method will take a month)
                         </button>
                     </section>
@@ -323,16 +311,16 @@
 
                         <p>
                             The former HHM associate confirms that Jimmy McGill worked 
-                            there as a lawyer, but they can't find his current wherabouts.
-                            They mention that he had a small office outside the major law firms.
+                            there as a <strong>lawyer</strong>, but they <strong>can't find his current wherabouts.</strong>
+                            They mention that he had a <strong>small office</strong> outside the major law firms.
 
                         </p>
 
                         <p>You find an old government office that claims they can 
-                            point you toward Saul's original office.
+                            point you toward <strong>Saul's original office.</strong>
                         </p>
 
-                        <button onclick="chooseOption(false)">
+                        <button onclick="chooseOption(true, 'fail-3')">
                             The associate seems to look nervous. Search their place
                         </button>
 
@@ -357,12 +345,12 @@
                         </p>
 
                         <p>
-                            The listing is completely outdated, but you find that <strong>the location
+                            The listing is <strong>completely outdated,</strong> but you find that <strong>the location
                                 is inside a nail salon
                             </strong>
                         </p>
 
-                        <button onclick="chooseOption(false)">
+                        <button onclick="chooseOption(true,'scene-7')">
                             Interrogate the nail salon's owner
                         </button>
 
@@ -557,7 +545,6 @@
                            You find an old man in the vacuum cleaner store. You question him, but he says <strong>he knows nothing.</strong>
                            <em>Sigh... </em>
 
-
                         </p>
 
                         <span>He asks for your ID, but you left it at home</span>
@@ -580,20 +567,123 @@
                         <h2>The Vacuum Cleaner Guy</h2>
 
                         <p>
-                           <em>I know nothing man</em>
+                           <em>I know nothing man</em> You don't believe him. Why would Saul need a vacuum in an office with 
+                           no carpet!? He weakly offers you <strong>Vacuum discounts.</strong> You threaten him, saying you know what hes done
+                           and you'll <strong>turn him into the police</strong> if he doesn't confess.
 
 
                         </p>
 
-                        <span>He asks for your ID, but you left it at home</span>
+                        <span>He gives in, but he asks for a lawyer.</span>
 
-                        <button onclick="chooseOption(true, 'scene-2')">
-                            Go back to HHM and see if they have something for you!!!!
+                        <button onclick="chooseOption(true, 'scene-14')">
+                            Grant him his lawyer and get the conversation started
                         </button>
 
-                        <button onclick="chooseOption(true, 'scene-13')">
-                            Assault the vacuum cleaner guy... -_-
+                        <button onclick="chooseOption(true, 'scene-15')">
+                            Threaten him further since a lawyer will slow down your leads
                         </button>
+                    </section>
+
+                    <!--Decision14-->
+                    <section class="decision-scene" id="scene-14" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>The lawyer</h2>
+
+                        <p>
+                           He hires a lawyer who turns up in the next 15 minutes. You spend 30 minutes callibrating the camera
+                           and start asking him questions, but the <strong>lawyer takes over.</strong> He dilutes the conversation
+                           <strong>really well,</strong> since after all he graduated from <strong>Harvard.</strong>
+
+
+                        </p>
+
+                        <span>He ends up confusing you and you end up calling the police and turning yourself in for nothing...</span>
+
+                        <button onclick="location.reload()">Try Again once you've regained your conciousness...</button>
+                    </section>
+
+                    <!--Decision15-->
+                    <section class="decision-scene" id="scene-15" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>The confrontation</h2>
+
+                        <p>
+                           You push. You pin him to a wall and <strong>growl in his face.</strong> He weakly frowns. <em>If I tell you
+                            will you let me go right now?</em> You say yes. 
+                        </p>
+
+                        <p>
+                           He tells you he transports people and <strong>gives them new identities.</strong> He says he transported
+                           Saul to <strong>Omaha</strong> and gave him a new identity as <strong>Gene Takavic.</strong> Then he weakly
+                           asks for <strong>a lawyer</strong> since he's done so much and has a lot of trauma.
+                        </p>
+
+                        <span>You're an inch away from solving this and finally getting at $7 raise!</span>
+
+                        <button onclick="chooseOption(true, 'scene-16')">
+                            Book a flight to Omaha immediately
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-14')">
+                            Grant him a lawyer since he looks like hes going to collapse
+                        </button>
+                    </section>
+
+                    <!--Decision16-->
+                    <section class="decision-scene" id="scene-16" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>Felina</h2>
+
+                        <p>
+                           <strong>Its been a month.</strong> The cops have been searching for you since you've gone missing. But you, you're in Omaha.
+                           After <strong>relentlessly</strong> searching, you've found Saul. He's right in front of you, and you're breathing on his face.
+                        </p>
+
+                        <p>
+                           Saul frowns. He asks what you're going to do. But honestly, you have no idea.
+                        </p>
+
+                        <button onclick="chooseOption(true, 'scene-17')">
+                            Turn him in and get a $7 raise but also get caught for threatening the vacuum man
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-17')">
+                            Become like Saul and change your identity since you don't want to get caught.
+                        </button>
+                    </section>
+                </section>
+                
+
+                <!--Decision17-->
+                    <section class="decision-scene" id="scene-17" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>Ozymandias</h2>
+
+                        <p>
+                           Every good thing <strong>ends here.</strong> Whatever you chose, you kind of lost. All bad things must come to an end.
+                           The legend Saul Goodman reigns. 
+                        </p>
+
+                        <span>You ask the maker of the game why he ended it so badly. He says he didn't know how to end it so he decided to ruin it for you.</span>
+
+                        <span><em>Hope you didn't like the ending! I didn't either...</em></span>
+
+                        <button onclick="location.reload()">Play again when there's no point</button>
+
+                        <button onclick="chooseOption(false)">Just accept defeat.</button>
                     </section>
                 </section>
 
@@ -602,14 +692,77 @@
                     <p>Your case flew too close to the sun. It burned</p>
                     <button onclick="location.reload()">Try Again.</button>
                 </section>
-                
+
+                 <!--Fail1-->
+                    <section class="decision-scene" id="fail-1" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>A pile of paperwork...</h2>
+
+                        <p>
+                           You get handed <strong>17 boxes</strong> of case files from your
+                           collegues. Shocked, you <strong>quit your job.</strong> This is too much
+                           work for you. It's not worth the $7 raise you were about to get...
+
+                        </p>
+
+                        <span>On top of that, you've got PTSD so now you can't read anymore</span>
+
+                        <button onclick="location.reload()">Try Again once you learn how to read</button>
+                    </section>
+
+                     <!--Fail2-->
+                    <section class="decision-scene" id="fail-2" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>The LOOOONG wait</h2>
+
+                        <p>
+                           You waited a day. But unfortunately, you're <strong>negative attention span</strong>
+                           took over and you decide to quit your job and start <strong>doomscrolling</strong> again.
+
+                        </p>
+
+                        <span>tung tung sahur</span>
+
+                        <button onclick="location.reload()">Try Again once you go on a dopamine detox.</button>
+                    </section>
+
+                     <!--Fail-3-->
+                    <section class="decision-scene" id="fail-3" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>Searching the associate's office</h2>
+
+                        <p>
+                           You tell the associate you want to play hide and seek. She looks at you weirdly,
+                           but its been a while since she played so <strong>she agrees.</strong>
+
+
+                        </p>
+
+                        <p>
+                            While shes hiding, you <strong>search her house.</strong> You find <strong>nothing.</strong>
+                            She comes out after <strong>10 minutes</strong> and reports you for unlawful search.
+                        </p>
+
+                        <span>The next thing you know, you're being lectured by your boss</span>
+
+                        <button onclick="location.reload()">Try Again after your lecture</button>
+                    </section>
             </main>
 
                 <hr width="50%">
 
                 <footer class="terminal-footer">
                     <span>DEA RECORDS SYSTEM</span>
-                    <span>HIGHLY SECRETIVE</span>
+                    <span>made by ajithesh</span>
                 </footer>
              
         </div>
