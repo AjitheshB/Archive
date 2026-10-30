@@ -114,8 +114,8 @@ recordsBtn.addEventListener("click", () => {
 
 const back = document.querySelectorAll(".back")
 
-back.forEach((back) => {
-    back.addEventListener("click",() => {
+back.forEach((button) => {
+    button.addEventListener("click",() => {
         if (subjId.classList.contains("visible")) {
             subjId.classList.remove("visible")
             recordsPage.classList.add("visible")
@@ -150,37 +150,36 @@ subjIdBtn.addEventListener("click", () => {
 
 // DECISION LAAYER
 function chooseOption(correct,nextScene) {
-    const currentScene = document.querySelector(
-        "#scene-1"
-    )
-
-    if (!currentScene) {
-        console.error("no scene found...")
-        return
-    }
+    const currentScene = document.querySelector(".decision-scene:not([hidden])")
+    const gameOver=document.querySelector("#game-over")
+    
 
     if (!correct) {
-        const gameOver=document.querySelector("#game-over")
-        gameOver.hidden=false
-        gameOver.style.display = "block"
+        decisionLayer.classList.remove("visible")
+        decisionLayer.hidden = true
+
+        gameOver.hidden = false
+        
         terminal.scrollTo({
             top:0,
             behavior:"smooth"
         })  
-        currentScene.hidden = true
-        document.querySelector("#game-over").hidden = false
         return
 
         
     }
 
+    const next = document.getElementById(nextScene.replace("#", ""))
 
-    if (nextScene) {
-        currentScene.hidden = true
-        document.querySelector(nextScene).hidden = false
-    } else {
-        console.error("Scene not found:", nextScene)
+    if (!next) {
+        console.error("Scene not found", nextScene)
+        return
     }
+
+    if (currentScene) currentScene.hidden = true;
+    next.hidden = false
+
+    terminal.scrollTo({top:0, behavior: "smooth"})
 }   
 
 const investigationBtn = document.querySelector(".investigationbtn")
@@ -189,6 +188,7 @@ const decisionLayer = document.querySelector(".decisions")
 investigationBtn.addEventListener("click", () => {
     deleteContent.classList.add("remove")
     decisionLayer.classList.add("visible")
+    decisionLayer.hidden = false
 
     terminal.scrollTo({
         top:0,

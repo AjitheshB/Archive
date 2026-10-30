@@ -486,7 +486,7 @@ body {
 }
 
 .subject-identification {
-    display:none !important;
+    display:none;
     background:var(--paper-dark);
     padding:15px;
     margin:15px;
@@ -531,7 +531,7 @@ body {
 }
 
 .subject-identification.visible {
-    display:block !important;
+    display:block;
 }
 
 .back {
@@ -559,16 +559,22 @@ body {
     border:1px solid var(--rule);
     box-shadow:0 8px 24px rgba(0,0,0,0.2);
 
-    display:none;
     text-align:center;
     align-items:center;
+    display:none;
 }
 
-#decisions.visible {
-    display:block !important;
+
+#game-over[hidden] {
+    display:none !important;
 }
 
-.decisions h2, .game-over h2 {
+#game-over:not([hidden]) {
+    display:block;
+}
+
+
+.decision-scene h2, .game-over h2 {
     font-family:'Allura',cursive;
     font-size:2rem;
     margin-bottom:20px;
@@ -576,13 +582,13 @@ body {
     font-weight:700;
 }
 
-.decision p{
+.decision-scene p{
     font-size:1.05rem;
     line-height:1.7;
     margin-bottom:24px;
 }
 
-.decisions button, .game-over button {
+.decision-scene button, .game-over button {
     font-family:'Libre Baskerville', Georgia, serif;
     background:var(--paper-dark);
     border-radius:12px;
@@ -592,7 +598,7 @@ body {
 
 }
 
-.decisions span {
+.decision-scene span {
     font-family:monospace;
     font-weight:600;
     font-size:1rem;
@@ -601,6 +607,10 @@ body {
     margin-bottom:5px;
 }
 
-#decisions {
-    display: none !important;
+#decisions[hidden] {
+    display:none !important;
+}
+
+#decisions.visible {
+    display:block;
 }

@@ -260,7 +260,7 @@
                 </section>
 
                 <!--DECISION LAYER-->
-                <section class="decisions visible" id="decisions">
+                <section class="decisions visible" id="decisions" hidden>
                     <section class="decision-scene" id="scene-1">
                         <button class="back btn">
                             <i data-lucide="arrow-left"></i>
@@ -280,6 +280,320 @@
 
                         <button onclick="chooseOption(false)">
                             Search public records for McGill's cases instead
+                        </button>
+                    </section>
+
+                    <!--Decision2-->
+                    <section class="decision-scene" id="scene-2" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>Contacting Hamlin Hamin & McGill</h2>
+
+                        <p>
+                            You contact Hamlin, Hamlin & McGill to verify
+                            James McGill's former employment and find potential leads.
+                            You find that <strong>the firm is no longer operational,</strong>
+                            but come into contact with a former associate of the firm.
+                        </p>
+
+                        <p>They say they may be able to clarify his professional history, 
+                            but it may notify Saul Goodman as well as take a week to process
+                        </p>
+
+                        <span>What's your next move?</span>
+
+                        <button onclick ="chooseOption(true, 'scene-3')">
+                            Ask them to pull up the records anyway
+                        </button>
+
+                        <button onclick = "chooseOption(false)">
+                            Tell them to do it secretively (this method will take a month)
+                        </button>
+                    </section>
+
+                    <!--Decision3-->
+                    <section class="decision-scene" id="scene-3" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>A Week Later</h2>
+
+                        <p>
+                            The former HHM associate confirms that Jimmy McGill worked 
+                            there as a lawyer, but they can't find his current wherabouts.
+                            They mention that he had a small office outside the major law firms.
+
+                        </p>
+
+                        <p>You find an old government office that claims they can 
+                            point you toward Saul's original office.
+                        </p>
+
+                        <button onclick="chooseOption(false)">
+                            The associate seems to look nervous. Search their place
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-4')">
+                            Visit the government office
+                        </button>
+                    </section>
+
+                    <!--Decision4-->
+                    <section class="decision-scene" id="scene-4" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>The Government Office - A Huge Lead!</h2>
+
+                        <p>
+                            The association for housing in Albequerque checks the <strong>archived
+                            business directory.</strong> They find an old listing for Jame's McGill's own 
+                            office, along with an address for a small office where he one worked from.
+
+                        </p>
+
+                        <p>
+                            The listing is completely outdated, but you find that <strong>the location
+                                is inside a nail salon
+                            </strong>
+                        </p>
+
+                        <button onclick="chooseOption(false)">
+                            Interrogate the nail salon's owner
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-5')">
+                            Visit Saul's former office
+                        </button>
+                    </section>
+
+                     <!--Decision5-->
+                    <section class="decision-scene" id="scene-5" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>The Nail Salon</h2>
+
+                        <p>
+                           You travel to the <strong>nail salon</strong> and find
+                           <strong>Jimmy's old office there.</strong> It's no longer in use.
+                           However, you spot a few documents kept inside the office.
+
+                        </p>
+
+                        <p>The nail salon's owner is right outside</p>
+
+                        <button onclick="chooseOption(true, 'scene-7')">
+                            Interrogate the nail salon's owner
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-6')">
+                            Break into Saul's former office
+                        </button>
+                    </section>
+
+                    <!--Decision7-->
+                    <section class="decision-scene" id="scene-7" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>The Salon's Owner</h2>
+
+                        <p>
+                           You question the owner about <strong>Saul's wherabouts.</strong>
+                           She says she knew Saul well but she has <strong>no clue</strong> on where he went. 
+                           She mentions she knew that he had another, newer office downtown.
+
+                        </p>
+
+                        <p>She gives you <strong>the location.</strong></p>
+
+                        <button onclick="chooseOption(true, 'scene-8')">
+                            Visit Saul's newer office
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-6')">
+                            Break into Saul's older office
+                        </button>
+                    </section>
+
+                    <!--Decision6-->
+                    <section class="decision-scene" id="scene-6" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>Breaking In...</h2>
+
+                        <p>
+                           You <strong>break into</strong> Saul's former office without a warrant. The salon's
+                           owner screams at you, but you don't stop. You take the files you find and spot that 
+                           Saul's office location is mentioned multiple times.
+
+                        </p>
+
+                        <p>The nail salon's owner <strong>calls the police</strong></p>
+
+                        <button onclick="chooseOption(true, 'scene-9')">
+                            Wait for the police to arrive
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-8')">
+                            Head toward Saul's newer office
+                        </button>
+                    </section>
+
+                    <!--Decision8-->
+                    <section class="decision-scene" id="scene-8" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>Saul's Newer Office</h2>
+
+                        <p>
+                           Saul's newer office is still worn down, with torn posters and a hole in the window. <strong>You sneak in.</strong> 
+                           Inside his office, you find <strong>2 clues</strong> that seem helpful. One is a <strong>vacuum cleaner shop's business card</strong>
+                           and the other is a piece of paper with <strong>a phone number on it.</strong>
+
+                        </p>
+
+                        <span>What will you do?</span>
+
+                        <button onclick="chooseOption(true, 'scene-10')">
+                            Call the phone number
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-11')">
+                            Go to the vacuum cleaner's location
+                        </button>
+                    </section>
+
+                    <!--Decision9-->
+                    <section class="decision-scene" id="scene-9" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>The Police Arrive</h2>
+
+                        <p>
+                           You hear sirens and the next thing you know, <strong>you're being questioned.</strong>
+                           You say you had probable cause but they don't believe you. They ask you
+                           to <strong>come BACK to your office</strong>
+
+                        </p>
+
+                        <span>You know going to the office is just going to make this longer...</span>
+
+                        <button onclick="chooseOption(false)">
+                            Go to the police office
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-8')">
+                            Run away to Saul's newer office
+                        </button>
+                    </section>
+
+                    <!--Decision10-->
+                    <section class="decision-scene" id="scene-10" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>Calling the number</h2>
+
+                        <p>
+                           You call the number. <strong>It rings... </strong>Finally, someone answers. <em>Hello?</em>
+                           You recognize the voice! 
+
+                        </p>
+
+                        <span>It's the Nail Salon's owner!</span>
+
+                        <button onclick="chooseOption(true, 'scene-12')">
+                            Go to the police office
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-11')">
+                            Forget the lead and go to the vacuum cleaner store
+                        </button>
+                    </section>
+
+                     <!--Decision12-->
+                    <section class="decision-scene" id="scene-12" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>Calling the cops</h2>
+
+                        <p>
+                           You go to the police office and the <strong>nail salon's owner is already there</strong>
+                           She says you've been creeping her out, and the police don't believe you're explanations
+
+                        </p>
+
+                        <span><em>Aw crap...</em>></span>
+
+                        <button onclick="location.reload()">Try Again.</button>
+                    </section>
+
+                    <!--Decision11-->
+                    <section class="decision-scene" id="scene-11" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>The Vacuum Cleaner Mystery</h2>
+
+                        <p>
+                           You find an old man in the vacuum cleaner store. You question him, but he says <strong>he knows nothing.</strong>
+                           <em>Sigh... </em>
+
+
+                        </p>
+
+                        <span>He asks for your ID, but you left it at home</span>
+
+                        <button onclick="chooseOption(true, 'scene-2')">
+                            Go back to HHM and see if they have something for you!!!!
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-13')">
+                            Verbally interrogate the vacuum cleaner guy... -_-
+                        </button>
+                    </section>
+                    
+                    <!--Decision13-->
+                    <section class="decision-scene" id="scene-13" hidden>
+                        <button class="back btn">
+                            <i data-lucide="arrow-left"></i>
+                        </button>
+
+                        <h2>The Vacuum Cleaner Guy</h2>
+
+                        <p>
+                           You find an old man in the vacuum cleaner store. You question him, but he says <strong>he knows nothing.</strong>
+                           <em>Sigh... </em>
+
+
+                        </p>
+
+                        <span>He asks for your ID, but you left it at home</span>
+
+                        <button onclick="chooseOption(true, 'scene-2')">
+                            Go back to HHM and see if they have something for you!!!!
+                        </button>
+
+                        <button onclick="chooseOption(true, 'scene-13')">
+                            Assault the vacuum cleaner guy... -_-
                         </button>
                     </section>
                 </section>
