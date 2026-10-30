@@ -13,27 +13,27 @@ One decision leads to the next, and beware that some decisions may even ruin you
 Proceed with caution. Use your brain. Make the right decisions.
 ---
 
-![Homescreen](image.png)
+![Homescreen](assets/image.png)
 
-![Tutorial](image-1.png)
+![Tutorial](assets/image-1.png)
 
-![Case Details](image-2.png)
+![Case Details](assets/image-2.png)
 
-![Terminal](image-3.png)
+![Terminal](assets/image-3.png)
 
-![Saul Goodman](image-4.png)
+![Saul Goodman](assets/image-4.png)
 
 ---
 
 ### Make Decisions 
-![Decision](image-5.png)
+![Decision](assets/image-5.png)
 
-![Decision2](image-6.png)
+![Decision2](assets/image-6.png)
 
-![Decision3](image-7.png)
+![Decision3](assets/image-7.png)
 
 ### Win/Lose
-![Lose](image-8.png)
+![Lose](assets/image-8.png)
 
 ---
 
