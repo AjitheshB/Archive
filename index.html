@@ -266,7 +266,7 @@
                             Contact HHM directly
                         </button>
 
-                        <button onclick="chooseOption(true,'fail-1')">
+                        <button onclick="chooseOption(true,'scene-100')">
                             Search public records for McGill's cases instead
                         </button>
                     </section>
@@ -296,7 +296,7 @@
                             Ask them to pull up the records anyway
                         </button>
 
-                        <button onclick = "chooseOption(true, 'fail-2')">
+                        <button onclick = "chooseOption(true, 'scene-101')">
                             Tell them to do it secretively (this method will take a month)
                         </button>
                     </section>
@@ -320,7 +320,7 @@
                             point you toward <strong>Saul's original office.</strong>
                         </p>
 
-                        <button onclick="chooseOption(true, 'fail-3')">
+                        <button onclick="chooseOption(true, 'scene-102')">
                             The associate seems to look nervous. Search their place
                         </button>
 
@@ -661,7 +661,6 @@
                             Become like Saul and change your identity since you don't want to get caught.
                         </button>
                     </section>
-                </section>
                 
 
                 <!--Decision17-->
@@ -685,16 +684,9 @@
 
                         <button onclick="chooseOption(false)">Just accept defeat.</button>
                     </section>
-                </section>
-
-                <section class="game-over" id="game-over" hidden>
-                    <h2>CASE CLOSED...</h2>
-                    <p>Your case flew too close to the sun. It burned</p>
-                    <button onclick="location.reload()">Try Again.</button>
-                </section>
 
                  <!--Fail1-->
-                    <section class="decision-scene" id="fail-1" hidden>
+                    <section class="decision-scene" id="scene-100" hidden>
                         <button class="back btn">
                             <i data-lucide="arrow-left"></i>
                         </button>
@@ -714,7 +706,7 @@
                     </section>
 
                      <!--Fail2-->
-                    <section class="decision-scene" id="fail-2" hidden>
+                    <section class="decision-scene" id="scene-101" hidden>
                         <button class="back btn">
                             <i data-lucide="arrow-left"></i>
                         </button>
@@ -732,8 +724,8 @@
                         <button onclick="location.reload()">Try Again once you go on a dopamine detox.</button>
                     </section>
 
-                     <!--Fail-3-->
-                    <section class="decision-scene" id="fail-3" hidden>
+                     <!--scene-102-->
+                    <section class="decision-scene" id="scene-102" hidden>
                         <button class="back btn">
                             <i data-lucide="arrow-left"></i>
                         </button>
@@ -756,6 +748,16 @@
 
                         <button onclick="location.reload()">Try Again after your lecture</button>
                     </section>
+
+
+                    
+                    <section class="game-over" id="game-over" hidden>
+                        <h2>CASE CLOSED...</h2>
+                        <p>Your case flew too close to the sun. It burned</p>
+                        <button onclick="location.reload()">Try Again.</button>
+                    </section>
+                </section>
+
             </main>
 
                 <hr width="50%">
