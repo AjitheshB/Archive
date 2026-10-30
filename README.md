@@ -40,3 +40,6 @@ Proceed with caution. Use your brain. Make the right decisions.
 ---
 
 Made for HackClub Terra
+
+Wallpaper from DharmX Walls
+Music by Dave Porter
